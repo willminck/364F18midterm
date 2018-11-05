@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Industries within the Database:</h1>
+
+<ul>
+{% for industry in industries %}
+    <p>There are {{ industry.count }} companies in the {{ industry.industry }} industry.</p>
+{% endfor %}
+</ul>
+
+{% if industries|length < 1 %}
+    There are no industries in the database.
+{% endif %}
+
+<div>
+{% for message in get_flashed_messages() %}
+    <strong>*** {{ message }} ***</strong>
+{% endfor %}
+</div>
+
+{% endblock %}

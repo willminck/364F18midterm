@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Names Visited</h1>
+
+{% for n in names %}
+    <p>{{ n }}</p>
+{% endfor %}
+
+
+{% endblock %}

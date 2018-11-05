@@ -1,0 +1,17 @@
+{% block content %}
+<form action = "{{ url_for('home') }}" method="POST">
+    {{ form.name.label() }}{{ form.name() }}<br>
+    {{ form.submit() }}
+    {{ form.hidden_tag() }}
+</form>
+
+{% endblock %}
+
+<ul>
+    <li><a href="{{ url_for('home')}}">Home Page</a></li>
+    <li><a href="{{ url_for('data_entry')}}">Company Information Input Page</a></li>
+    <li><a href="{{ url_for('facts')}}">Company Fun Facts Input Page</a></li>
+    <li><a href="{{ url_for('see_all_companies')}}">View all companies</a></li>
+    <li><a href="{{ url_for('see_all_stocks')}}">View all stocks</a></li>
+    <li><a href="{{ url_for('see_all_industries')}}">View all industries</a></li>
+</ul>

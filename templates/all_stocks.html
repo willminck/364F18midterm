@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Stocks within the Database:</h1>
+
+<ul>
+{% for stock in stocks %}
+    <p>{{ stock.symbol }} is currently priced at ${{ stock.price }}.</p>
+{% endfor %}
+</ul>
+
+{% if stocks|length < 1 %}
+    There are no stocks in the database.
+{% endif %}
+
+<div>
+{% for message in get_flashed_messages() %}
+    <strong>*** {{ message }} ***</strong>
+{% endfor %}
+</div>
+
+{% endblock %}

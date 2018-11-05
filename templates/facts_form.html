@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="http://localhost:5000/fun_facts" method="GET">
+  {{ form.ceo.label() }}{{ form.ceo() }}<br>
+  {{ form.hq.label() }}{{ form.hq() }}<br>
+  {{ form.launch.label() }}{{ form.launch() }}<br>
+  {{ form.submit() }}
+  {{ form.hidden_tag() }}
+</form>
+{% endblock %}

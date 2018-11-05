@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Companies within the Database:</h1>
+
+<ul>
+{% for company in companies %}
+    <p>{{ company.name }} trades under {{ company.symbol }} and is in the {{ company.industry }} industry.</p>
+{% endfor %}
+</ul>
+
+{% if companies|length < 1 %}
+    There are no companies in the database.
+{% endif %}
+
+<div>
+{% for message in get_flashed_messages() %}
+    <strong>*** {{ message }} ***</strong>
+{% endfor %}
+</div>
+
+{% endblock %}

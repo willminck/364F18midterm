@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="{{ url_for('data_entry') }}" method="POST">
+    {{ form.name.label() }}{{ form.name() }}<br>
+    {{ form.symbol.label() }}{{ form.symbol() }}<br>
+    {{ form.industry.label() }}{{ form.industry() }}<br>
+    {{ form.submit() }}
+    {{ form.hidden_tag() }}
+</form>
+
+{% endblock %}
