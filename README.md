@@ -1,5 +1,4 @@
 # 364F18midterm
-# 364F18midterm
 http://localhost5000/ --> base.html
 http://localhost5000/names --> name_example.html
 http://localhost5000/entry_page --> input.html
